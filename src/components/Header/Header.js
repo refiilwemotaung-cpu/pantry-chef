@@ -25,7 +25,7 @@ const Header = () => {
                 🏠
               </div>
               <h1 className="header-title m-0" style={{ color: colors.text }}>
-                PantryChef
+                Cupboard Cuisine
               </h1>
             </div>
           </div>
