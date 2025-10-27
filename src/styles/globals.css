@@ -1,0 +1,78 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease;
+}
+
+.app {
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+/* Light Theme */
+.app.light {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Dark Theme */
+.app.dark {
+  background-color: #1a1a2e;
+  color: #ffffff;
+}
+
+/* Bootstrap Overrides with Our Color Scheme */
+.btn-primary {
+  background-color: #a2dbcb !important;
+  border-color: #a2dbcb !important;
+  color: #333 !important;
+}
+
+.btn-secondary {
+  background-color: #b09fc4 !important;
+  border-color: #b09fc4 !important;
+  color: white !important;
+}
+
+.btn-accent {
+  background-color: #ffccb4 !important;
+  border-color: #ffccb4 !important;
+  color: #333 !important;
+}
+
+/* Responsive Design */
+.container-fluid {
+  padding: 0;
+}
+
+.row {
+  margin: 0;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a2dbcb;
+  border-radius: 4px;
+}
+
+.app.dark ::-webkit-scrollbar-track {
+  background: #16213e;
+}
+
+.app.dark ::-webkit-scrollbar-thumb {
+  background: #b09fc4;
+}
