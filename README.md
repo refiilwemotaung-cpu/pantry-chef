@@ -1,70 +1,154 @@
-# Getting Started with Create React App
+CupboardCuisine 🍳
+Turn your pantry into possibilities! CupboardCuisine is a smart recipe finder that helps you discover delicious meals you can make with ingredients you already have in your kitchen.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+https://via.placeholder.com/800x400/A2DBCB/000000?text=CupboardCuisine+-+Smart+Recipe+Finder
 
-## Available Scripts
+✨ What This App Does
+Have you ever looked in your fridge and pantry and thought "I have food, but no idea what to cook?" CupboardCuisine solves that!
 
-In the project directory, you can run:
+Simply:
 
-### `npm start`
+➕ Add ingredients from your kitchen
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+🔍 See recipes you can make right now
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+🍳 Cook amazing meals without extra shopping!
 
-### `npm test`
+🎯 Key Features
+🎨 Beautiful Design
+Light & Dark Mode - Easy on your eyes day or night
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Works on All Devices - Phone, tablet, and computer
 
-### `npm run build`
+Pretty Colors - Teal, purple, and peach theme
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+📱 Easy to Use
+Add Ingredients - Type or use quick buttons
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+See Recipe Matches - Instantly shows what you can cook
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Match Percentage - See how close you are to complete recipes
 
-### `npm run eject`
+Remove Items - Click the X to remove ingredients
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+🍽️ Smart Recipe Matching
+6 Sample Recipes included (more coming soon!)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Shows Complete Matches - Recipes you can make now
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Shows Partial Matches - Recipes missing 1-2 ingredients
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Visual Progress Bars - See your match percentage
 
-## Learn More
+🚀 Try It Live
+Visit: [https://cupboard-cuisine.vercel.app](https://cupboardcuisine.vercel.app/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+🛠️ How It's Built
+This app uses:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+React.js - For the interactive interface
 
-### Code Splitting
+Bootstrap - For responsive design
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+CSS3 - For beautiful styling
 
-### Analyzing the Bundle Size
+JavaScript - For the smart matching logic
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Vercel - For hosting the website
 
-### Making a Progressive Web App
+🎨 Color Scheme
+The app uses these pretty colors:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+#A2DBCB (Fresh Teal) - Main background
 
-### Advanced Configuration
+#B09FC4 (Creative Purple) - Sidebar and header
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+#FFCCB4 (Warm Peach) - Buttons and accents
 
-### Deployment
+📁 What's Inside
+text
+src/
+├── components/
+│   ├── Header/           # Top bar with app name and theme toggle
+│   ├── IngredientList/   # Left sidebar to manage ingredients
+│   ├── RecipeList/       # Main area showing recipes
+│   └── RecipeCard/       # Individual recipe boxes
+├── context/
+│   └── ThemeContext.js   # Manages light/dark mode
+├── styles/
+│   └── globals.css       # All the styling
+└── App.js               # Main app file
+🏃‍♂️ Run This Project Yourself
+What You Need:
+Node.js (download from nodejs.org)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+A code editor (like VS Code)
 
-### `npm run build` fails to minify
+Steps:
+Download the code
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+bash
+git clone https://github.com/refiilwemotaung-cpu/pantry-chef.git
+cd cupboard-cuisine
+Install packages
+
+bash
+npm install
+Start the app
+
+bash
+npm start
+Open your browser to http://localhost:3000
+
+📱 Recipes Included
+The app comes with 6 sample recipes:
+
+🍲 Vegetable Stir Fry
+
+🍳 Classic Omelette
+
+🍝 Pasta Carbonara
+
+🥗 Greek Salad
+
+🍛 Chicken Curry
+
+🍪 Chocolate Chip Cookies
+
+🌙 Light/Dark Mode
+Click the sun/moon button to switch between:
+
+Light Mode - Bright and clean for daytime
+
+Dark Mode - Easy on the eyes for nighttime cooking
+
+📞 Support
+If you have questions or find issues:
+
+Check the live demo first
+
+Create an "Issue" in this GitHub repository
+
+I'll help you fix it!
+
+🔮 Future Ideas
+Here's what I might add next:
+
+User accounts to save your pantry
+
+More recipes
+
+Shopping list feature
+
+Meal planning calendar
+
+Cooking timer
+
+Nutrition information
+
+📄 License
+This project is open source and free to use under the MIT License.
+
+Made with ❤️ by Refilwe Motaung
+
+Stop wondering what to cook - start cooking what you have!
