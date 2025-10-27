@@ -2,21 +2,20 @@ import React, { useState } from "react";
 import { useTheme } from "../../context/ThemeContext";
 import "./IngredientList.css";
 
-const IngredientList = () => {
+const IngredientList = ({
+  ingredients,
+  onAddIngredient,
+  onRemoveIngredient,
+  setIngredients,
+}) => {
   const { colors } = useTheme();
-  const [ingredients, setIngredients] = useState([]);
   const [newIngredient, setNewIngredient] = useState("");
 
   const handleAddIngredient = () => {
     if (newIngredient.trim() !== "") {
-      setIngredients([...ingredients, newIngredient.trim()]);
+      onAddIngredient(newIngredient.trim());
       setNewIngredient("");
     }
-  };
-
-  const handleRemoveIngredient = (index) => {
-    const updatedIngredients = ingredients.filter((_, i) => i !== index);
-    setIngredients(updatedIngredients);
   };
 
   const handleKeyPress = (e) => {
@@ -93,7 +92,7 @@ const IngredientList = () => {
                 >
                   <span className="ingredient-name">{ingredient}</span>
                   <button
-                    onClick={() => handleRemoveIngredient(index)}
+                    onClick={() => onRemoveIngredient(index)}
                     className="remove-btn"
                     style={{
                       backgroundColor: colors.accent,
@@ -118,7 +117,7 @@ const IngredientList = () => {
                 <button
                   key={item}
                   onClick={() => {
-                    setIngredients([...ingredients, item]);
+                    onAddIngredient(item);
                   }}
                   className="quick-add-btn"
                   style={{

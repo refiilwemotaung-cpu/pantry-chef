@@ -90,20 +90,13 @@ const sampleRecipes = [
   },
 ];
 
-const RecipeList = () => {
+const RecipeList = ({ ingredients }) => {
   const { colors } = useTheme();
 
-  // For now, we'll use some sample available ingredients
-  // In the next step, we'll connect this with the actual ingredient list
-  const availableIngredients = [
-    "tomato",
-    "onion",
-    "garlic",
-    "eggs",
-    "chicken",
-    "pasta",
-    "cheese",
-  ];
+  // Use the actual ingredients from props instead of hardcoded array
+  const availableIngredients = ingredients.map((ingredient) =>
+    ingredient.toLowerCase()
+  );
 
   // Filter and sort recipes based on available ingredients
   const filteredRecipes = sampleRecipes
@@ -162,6 +155,16 @@ const RecipeList = () => {
               <span className="stat-number">{partialMatchRecipes.length}</span>
               <span className="stat-label">Partial Matches</span>
             </div>
+            <div
+              className="stat-card"
+              style={{
+                backgroundColor: colors.card,
+                border: `2px solid ${colors.secondary}`,
+              }}
+            >
+              <span className="stat-number">{ingredients.length}</span>
+              <span className="stat-label">My Ingredients</span>
+            </div>
           </div>
         </div>
 
@@ -208,14 +211,27 @@ const RecipeList = () => {
         )}
 
         {/* Empty State */}
-        {filteredRecipes.length === 0 && (
+        {filteredRecipes.length === 0 && ingredients.length > 0 && (
           <div className="empty-recipes text-center py-5">
             <div className="empty-icon mb-3" style={{ fontSize: "4rem" }}>
-              🍽️
+              🔍
             </div>
-            <h4>No recipes found</h4>
+            <h4>No matching recipes found</h4>
             <p className="empty-text">
-              Add more ingredients to your pantry to see matching recipes!
+              Try adding more ingredients to find matching recipes!
+            </p>
+          </div>
+        )}
+
+        {/* No Ingredients State */}
+        {ingredients.length === 0 && (
+          <div className="empty-recipes text-center py-5">
+            <div className="empty-icon mb-3" style={{ fontSize: "4rem" }}>
+              🥑
+            </div>
+            <h4>Your pantry is empty</h4>
+            <p className="empty-text">
+              Add some ingredients to the left to see recipes you can make!
             </p>
           </div>
         )}
